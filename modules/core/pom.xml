@@ -491,7 +491,7 @@
 		<dependency>
 			<groupId>io.opentelemetry</groupId>
 			<artifactId>opentelemetry-exporter-otlp-http-trace</artifactId>
-			<version>1.11.0</version>
+			<version>${opentelemetry.exporter.otlp.http.version}</version>
 			<exclusions>
 				<!-- Exclude vulnerable okio 2.8.0 - project uses WSO2 orbit okio instead -->
 				<exclusion>
