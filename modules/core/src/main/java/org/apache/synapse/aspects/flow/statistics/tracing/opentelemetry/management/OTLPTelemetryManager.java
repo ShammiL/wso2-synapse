@@ -52,15 +52,12 @@ public class OTLPTelemetryManager implements OpenTelemetryManager {
     public void init() {
 
         // Read configuration properties
-        String type = SynapsePropertiesLoader.getPropertyValue(TelemetryConstants.OPENTELEMETRY_TYPE,
-                TelemetryConstants.DEFAULT_OPENTELEMETRY_TYPE);
         String protocol = SynapsePropertiesLoader.getPropertyValue(TelemetryConstants.OPENTELEMETRY_PROTOCOL,
                 TelemetryConstants.GRPC_PROTOCOL);
         String endPointURL = SynapsePropertiesLoader.getPropertyValue(TelemetryConstants.OPENTELEMETRY_URL, null);
 
-        // Determine protocol: Use HTTP if type is "moesif" OR protocol is "http"
-        boolean useHttp = TelemetryConstants.MOESIF_TYPE.equalsIgnoreCase(type)
-                || TelemetryConstants.HTTP_PROTOCOL.equalsIgnoreCase(protocol);
+        // Determine protocol: Use HTTP if protocol is "http"
+        boolean useHttp = TelemetryConstants.HTTP_PROTOCOL.equalsIgnoreCase(protocol);
 
         // Get header property for authentication
         String headerProperty = getHeaderKeyProperty();

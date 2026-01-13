@@ -46,19 +46,9 @@ public class TelemetryConstants {
     public static final String OPENTELEMETRY_PORT = "opentelemetry.port";
 
     /**
-     * OpenTelemetry type.
-     */
-    public static final String OPENTELEMETRY_TYPE = "opentelemetry.type";
-
-    /**
      * OpenTelemetry protocol (http or grpc).
      */
     public static final String OPENTELEMETRY_PROTOCOL = "opentelemetry.protocol";
-
-    /**
-     * Moesif type constant.
-     */
-    public static final String MOESIF_TYPE = "moesif";
 
     /**
      * HTTP protocol constant.
@@ -69,12 +59,6 @@ public class TelemetryConstants {
      * gRPC protocol constant (default).
      */
     public static final String GRPC_PROTOCOL = "grpc";
-
-    /**
-     * Default opentelemtry type.
-     */
-    public static final String DEFAULT_OPENTELEMETRY_TYPE = "otlp";
-
 
     public static final String DEFAULT_OPENTELEMETRY_CLASS = "org.apache.synapse.aspects.flow.statistics.tracing" +
             ".opentelemetry.management.JaegerTelemetryManager";
